@@ -1,6 +1,5 @@
 package com.example.demo.controller;
 
-
 //import java.util.List;
 
 import org.springframework.beans.factory.annotation.Autowired;
@@ -40,6 +39,12 @@ public class Controller {
 		@PostMapping(value="/drivers")
 		public String drivers(@RequestBody UserSignup dlogin ){
 			return newservice.Driverlogin(dlogin);
+		}
+		
+		
+		@PostMapping(value="/cabinfo")
+		public String cabinfo(@RequestBody DriversModel taxiinfo ){
+			return newservice.cabinfo(taxiinfo);
 		}
 		
 		

@@ -8,12 +8,15 @@ import org.springframework.beans.factory.annotation.Autowired;
 
 import com.example.demo.Repo.*;
 import com.example.demo.models.UserSignup;
+import com.example.demo.models.DriversModel;
 
 
 @org.springframework.stereotype.Service
 public class Service {
 	
-	@Autowired private Repo newrepo;
+	@Autowired 
+	private Repo newrepo;
+	private CabRepo cabinformation;
 	
 	public String data(UserSignup user) {
 		
@@ -64,6 +67,12 @@ public class Service {
 		dlogin.setRole("Taxi Owners");
 		newrepo.save(dlogin);
 		return "Successfully Registered";
+	}
+	
+	public String cabinfo(DriversModel taxiinfo) {
+		
+		cabinformation.save(taxiinfo);
+		return "Saved";
 	}
 
 }
