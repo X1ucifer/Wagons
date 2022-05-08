@@ -31,7 +31,7 @@ public class Controller {
 //		@GetMapping(value="/aj")
 //		public List<UserSignup> getData(){
 //			
-//			return newservice.get();
+//			return newservice.getw();
 //		}
 		
 		@PostMapping(value="/signup")
